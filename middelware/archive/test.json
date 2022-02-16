@@ -1,0 +1,3002 @@
+[
+  {
+    "_id": "620bd7cf7f486cff563908d0",
+    "name": "Animal Fish Company",
+    "rating": 1,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908d1",
+    "name": "Sandwich Animal Company",
+    "rating": 1,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908d2",
+    "name": "Goat Animal Corporation",
+    "rating": 5,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908d3",
+    "name": "Salty Kitchen Corporation",
+    "rating": 1,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908d4",
+    "name": "Animal Sandwich LLC",
+    "rating": 5,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908d5",
+    "name": "Fun Sandwich Inc",
+    "rating": 1,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908d6",
+    "name": "Big Kitchen Company",
+    "rating": 2,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908d7",
+    "name": "Sandwich Pizza Company",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908d8",
+    "name": "Animal Sandwich Inc",
+    "rating": 2,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908d9",
+    "name": "City Big Corporation",
+    "rating": 4,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908da",
+    "name": "Tastey Goat LLC",
+    "rating": 4,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908db",
+    "name": "Lazy Lazy Corporation",
+    "rating": 5,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908dc",
+    "name": "Kitchen City LLC",
+    "rating": 2,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908dd",
+    "name": "City Tastey LLC",
+    "rating": 5,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908de",
+    "name": "Kitchen Big Corporation",
+    "rating": 3,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908df",
+    "name": "Animal Lazy Company",
+    "rating": 5,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908e0",
+    "name": "State Goat Corporation",
+    "rating": 2,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908e1",
+    "name": "Goat City Corporation",
+    "rating": 4,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908e2",
+    "name": "City Fun Corporation",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908e3",
+    "name": "State Salty LLC",
+    "rating": 1,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908e4",
+    "name": "Kitchen Pizza Inc",
+    "rating": 5,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908e5",
+    "name": "Kitchen State Corporation",
+    "rating": 3,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908e6",
+    "name": "Pizza Fun Inc",
+    "rating": 5,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908e7",
+    "name": "Tastey Kitchen Company",
+    "rating": 5,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908e8",
+    "name": "City City Corporation",
+    "rating": 2,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908e9",
+    "name": "City City Company",
+    "rating": 1,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908ea",
+    "name": "Animal Big LLC",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908eb",
+    "name": "Lazy Big LLC",
+    "rating": 4,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908ec",
+    "name": "Pizza State Corporation",
+    "rating": 1,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908ed",
+    "name": "Pizza Fun Company",
+    "rating": 3,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908ee",
+    "name": "Salty Lazy Corporation",
+    "rating": 2,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908ef",
+    "name": "Pizza Fun Inc",
+    "rating": 3,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908f0",
+    "name": "City Fun Inc",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908f1",
+    "name": "Goat State Inc",
+    "rating": 4,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908f2",
+    "name": "Salty Sandwich Inc",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908f3",
+    "name": "Sandwich Goat Corporation",
+    "rating": 5,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908f4",
+    "name": "Fish Tastey LLC",
+    "rating": 4,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908f5",
+    "name": "Fish Salty Inc",
+    "rating": 5,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908f6",
+    "name": "Fun Kitchen Inc",
+    "rating": 4,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908f7",
+    "name": "Salty Tastey Corporation",
+    "rating": 4,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908f8",
+    "name": "Fun Big Inc",
+    "rating": 4,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908f9",
+    "name": "Tastey Goat Corporation",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908fa",
+    "name": "Fun Animal Inc",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908fb",
+    "name": "Salty Pizza Corporation",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908fc",
+    "name": "Fish Fun Corporation",
+    "rating": 1,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908fd",
+    "name": "Salty Animal Company",
+    "rating": 1,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908fe",
+    "name": "Animal Animal Corporation",
+    "rating": 1,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7cf7f486cff563908ff",
+    "name": "City Salty Company",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390900",
+    "name": "Fish State Inc",
+    "rating": 5,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390901",
+    "name": "State State Inc",
+    "rating": 2,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390902",
+    "name": "State City Company",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390903",
+    "name": "Kitchen Lazy LLC",
+    "rating": 4,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390904",
+    "name": "Animal City Company",
+    "rating": 3,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390905",
+    "name": "City Sandwich Company",
+    "rating": 5,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390906",
+    "name": "Tastey Goat Corporation",
+    "rating": 2,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390907",
+    "name": "Kitchen Fish Corporation",
+    "rating": 3,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390908",
+    "name": "Salty Fun Company",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390909",
+    "name": "Animal Tastey Corporation",
+    "rating": 1,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7cf7f486cff5639090a",
+    "name": "State Tastey Company",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7cf7f486cff5639090b",
+    "name": "Fun Big Inc",
+    "rating": 3,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff5639090c",
+    "name": "Lazy Pizza Company",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7cf7f486cff5639090d",
+    "name": "Tastey Tastey Corporation",
+    "rating": 1,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff5639090e",
+    "name": "Goat Fish Corporation",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7cf7f486cff5639090f",
+    "name": "Salty City Inc",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390910",
+    "name": "Tastey Pizza Corporation",
+    "rating": 1,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390911",
+    "name": "Big Tastey Corporation",
+    "rating": 4,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390912",
+    "name": "Tastey Big LLC",
+    "rating": 3,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390913",
+    "name": "Salty Big LLC",
+    "rating": 3,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390914",
+    "name": "Sandwich Tastey Company",
+    "rating": 2,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390915",
+    "name": "Big Salty Company",
+    "rating": 3,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390916",
+    "name": "Sandwich Fish Corporation",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390917",
+    "name": "Sandwich Animal Company",
+    "rating": 2,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7cf7f486cff56390918",
+    "name": "Sandwich Fun Corporation",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff56390919",
+    "name": "City Animal Company",
+    "rating": 5,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff5639091a",
+    "name": "Tastey Animal Inc",
+    "rating": 3,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff5639091b",
+    "name": "Goat Tastey Company",
+    "rating": 1,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff5639091c",
+    "name": "Goat Big LLC",
+    "rating": 1,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d07f486cff5639091d",
+    "name": "State Fun Company",
+    "rating": 2,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff5639091e",
+    "name": "Pizza Animal LLC",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff5639091f",
+    "name": "Kitchen Animal LLC",
+    "rating": 3,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390920",
+    "name": "Sandwich Fun Inc",
+    "rating": 2,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff56390921",
+    "name": "Animal State Company",
+    "rating": 3,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff56390922",
+    "name": "State Salty Corporation",
+    "rating": 3,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff56390923",
+    "name": "State Salty Inc",
+    "rating": 3,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390924",
+    "name": "City Fish Company",
+    "rating": 1,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff56390925",
+    "name": "Fish Lazy Inc",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390926",
+    "name": "Animal Kitchen Corporation",
+    "rating": 1,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390927",
+    "name": "Big Pizza Corporation",
+    "rating": 1,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff56390928",
+    "name": "Fun Fish Inc",
+    "rating": 4,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390929",
+    "name": "Big Big LLC",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff5639092a",
+    "name": "Big Animal Inc",
+    "rating": 2,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff5639092b",
+    "name": "Fish City Company",
+    "rating": 1,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff5639092c",
+    "name": "Animal Tastey LLC",
+    "rating": 3,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff5639092d",
+    "name": "Fun Pizza Corporation",
+    "rating": 3,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff5639092e",
+    "name": "Tastey Pizza Company",
+    "rating": 4,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff5639092f",
+    "name": "City Fun Company",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff56390930",
+    "name": "Kitchen Salty Inc",
+    "rating": 3,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390931",
+    "name": "Sandwich Goat LLC",
+    "rating": 3,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390932",
+    "name": "Goat Sandwich LLC",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390933",
+    "name": "Fun Animal Corporation",
+    "rating": 4,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390934",
+    "name": "Sandwich Salty Corporation",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390935",
+    "name": "Big Kitchen Corporation",
+    "rating": 3,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff56390936",
+    "name": "Big Tastey LLC",
+    "rating": 2,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff56390937",
+    "name": "Tastey Tastey Company",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390938",
+    "name": "Sandwich Kitchen Inc",
+    "rating": 1,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff56390939",
+    "name": "Fun Fun LLC",
+    "rating": 3,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff5639093a",
+    "name": "Fish City Inc",
+    "rating": 3,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff5639093b",
+    "name": "City City Company",
+    "rating": 2,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff5639093c",
+    "name": "Sandwich Pizza Company",
+    "rating": 4,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d07f486cff5639093d",
+    "name": "City Salty Company",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff5639093e",
+    "name": "Goat Animal Corporation",
+    "rating": 3,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff5639093f",
+    "name": "Sandwich Lazy Company",
+    "rating": 3,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d07f486cff56390940",
+    "name": "Tastey Goat Company",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff56390941",
+    "name": "State City Company",
+    "rating": 3,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390942",
+    "name": "Fun Fun Company",
+    "rating": 2,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390943",
+    "name": "Sandwich Goat Inc",
+    "rating": 4,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff56390944",
+    "name": "State Goat Inc",
+    "rating": 4,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff56390945",
+    "name": "Lazy Salty Inc",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390946",
+    "name": "State Goat Inc",
+    "rating": 1,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff56390947",
+    "name": "Animal Kitchen Corporation",
+    "rating": 4,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390948",
+    "name": "Kitchen Animal Inc",
+    "rating": 3,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390949",
+    "name": "Lazy Big Corporation",
+    "rating": 5,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff5639094a",
+    "name": "Animal City Inc",
+    "rating": 1,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff5639094b",
+    "name": "Animal State LLC",
+    "rating": 2,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff5639094c",
+    "name": "Tastey Fish Corporation",
+    "rating": 4,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff5639094d",
+    "name": "Big Fun Company",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff5639094e",
+    "name": "City State LLC",
+    "rating": 3,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff5639094f",
+    "name": "Sandwich Big Inc",
+    "rating": 3,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390950",
+    "name": "Lazy Animal Company",
+    "rating": 1,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff56390951",
+    "name": "Lazy Goat Corporation",
+    "rating": 5,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390952",
+    "name": "City City Corporation",
+    "rating": 2,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff56390953",
+    "name": "Tastey Goat Inc",
+    "rating": 4,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390954",
+    "name": "Fish Goat Corporation",
+    "rating": 5,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390955",
+    "name": "City Salty Company",
+    "rating": 3,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d07f486cff56390956",
+    "name": "Fun Big Corporation",
+    "rating": 5,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390957",
+    "name": "Pizza Goat Inc",
+    "rating": 1,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390958",
+    "name": "Salty Fun LLC",
+    "rating": 2,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390959",
+    "name": "Goat Kitchen Company",
+    "rating": 5,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff5639095a",
+    "name": "Sandwich Fish LLC",
+    "rating": 4,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff5639095b",
+    "name": "Fun Fish Inc",
+    "rating": 2,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff5639095c",
+    "name": "State City Corporation",
+    "rating": 4,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff5639095d",
+    "name": "Lazy Tastey Corporation",
+    "rating": 5,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff5639095e",
+    "name": "Kitchen Goat Inc",
+    "rating": 5,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff5639095f",
+    "name": "Salty Goat Company",
+    "rating": 3,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390960",
+    "name": "State Goat Corporation",
+    "rating": 2,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d07f486cff56390961",
+    "name": "Kitchen Animal Corporation",
+    "rating": 5,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d07f486cff56390962",
+    "name": "City Lazy Corporation",
+    "rating": 4,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390963",
+    "name": "Fish Pizza LLC",
+    "rating": 5,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390964",
+    "name": "Animal Tastey Inc",
+    "rating": 1,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390965",
+    "name": "Sandwich State LLC",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390966",
+    "name": "Sandwich Lazy LLC",
+    "rating": 2,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff56390967",
+    "name": "State Tastey LLC",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390968",
+    "name": "Goat Lazy Company",
+    "rating": 2,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390969",
+    "name": "Fun Lazy LLC",
+    "rating": 4,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff5639096a",
+    "name": "Kitchen Salty Company",
+    "rating": 3,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff5639096b",
+    "name": "Tastey Salty Company",
+    "rating": 5,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d07f486cff5639096c",
+    "name": "Animal Pizza Corporation",
+    "rating": 3,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff5639096d",
+    "name": "Animal Sandwich Corporation",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff5639096e",
+    "name": "Fish Pizza Inc",
+    "rating": 1,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff5639096f",
+    "name": "Pizza Goat Company",
+    "rating": 4,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff56390970",
+    "name": "Sandwich Fish LLC",
+    "rating": 5,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390971",
+    "name": "Big Kitchen LLC",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390972",
+    "name": "Tastey Lazy Company",
+    "rating": 1,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d07f486cff56390973",
+    "name": "Goat Kitchen Inc",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390974",
+    "name": "Fun Salty Corporation",
+    "rating": 3,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390975",
+    "name": "Big City Corporation",
+    "rating": 4,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390976",
+    "name": "City Pizza Inc",
+    "rating": 3,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390977",
+    "name": "Sandwich Animal Corporation",
+    "rating": 3,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390978",
+    "name": "Salty Sandwich Company",
+    "rating": 2,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390979",
+    "name": "Tastey Fish LLC",
+    "rating": 2,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff5639097a",
+    "name": "State Kitchen Company",
+    "rating": 3,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff5639097b",
+    "name": "City Tastey Company",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff5639097c",
+    "name": "Big City Corporation",
+    "rating": 4,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff5639097d",
+    "name": "Kitchen Big LLC",
+    "rating": 3,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff5639097e",
+    "name": "Pizza Sandwich LLC",
+    "rating": 1,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff5639097f",
+    "name": "City Salty Inc",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390980",
+    "name": "Pizza Salty Corporation",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff56390981",
+    "name": "Goat City Company",
+    "rating": 1,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff56390982",
+    "name": "Fun Kitchen Inc",
+    "rating": 2,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff56390983",
+    "name": "Kitchen Goat Company",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff56390984",
+    "name": "Tastey Fun Company",
+    "rating": 4,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff56390985",
+    "name": "Fish Big Inc",
+    "rating": 2,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff56390986",
+    "name": "Fish Lazy Inc",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390987",
+    "name": "Big Kitchen Inc",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390988",
+    "name": "Kitchen Big Company",
+    "rating": 3,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff56390989",
+    "name": "Fun Pizza Inc",
+    "rating": 4,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff5639098a",
+    "name": "City Big Company",
+    "rating": 4,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff5639098b",
+    "name": "Salty State LLC",
+    "rating": 5,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff5639098c",
+    "name": "Fun Fish Company",
+    "rating": 5,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff5639098d",
+    "name": "Animal Animal LLC",
+    "rating": 1,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff5639098e",
+    "name": "Fish Goat Corporation",
+    "rating": 5,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff5639098f",
+    "name": "Pizza Animal Inc",
+    "rating": 3,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff56390990",
+    "name": "Pizza Sandwich Corporation",
+    "rating": 1,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390991",
+    "name": "Salty Tastey Inc",
+    "rating": 2,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff56390992",
+    "name": "Big Animal Company",
+    "rating": 4,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff56390993",
+    "name": "Animal Goat LLC",
+    "rating": 3,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff56390994",
+    "name": "Fun Salty LLC",
+    "rating": 3,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390995",
+    "name": "Tastey State Inc",
+    "rating": 1,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff56390996",
+    "name": "Fish Kitchen Company",
+    "rating": 4,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff56390997",
+    "name": "Fun Animal LLC",
+    "rating": 4,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff56390998",
+    "name": "City Tastey LLC",
+    "rating": 4,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff56390999",
+    "name": "Fun Goat Corporation",
+    "rating": 2,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff5639099a",
+    "name": "Pizza Goat Corporation",
+    "rating": 4,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff5639099b",
+    "name": "Pizza Fun Company",
+    "rating": 3,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff5639099c",
+    "name": "State Big LLC",
+    "rating": 5,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff5639099d",
+    "name": "Tastey Tastey Company",
+    "rating": 5,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff5639099e",
+    "name": "Salty Fish Company",
+    "rating": 1,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff5639099f",
+    "name": "Fish Big LLC",
+    "rating": 3,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909a0",
+    "name": "Goat Pizza LLC",
+    "rating": 3,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff563909a1",
+    "name": "Salty Fun Company",
+    "rating": 2,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff563909a2",
+    "name": "Pizza Sandwich Company",
+    "rating": 4,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909a3",
+    "name": "Pizza Animal Corporation",
+    "rating": 3,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d07f486cff563909a4",
+    "name": "Lazy Goat Company",
+    "rating": 4,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909a5",
+    "name": "Kitchen Kitchen Company",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff563909a6",
+    "name": "Salty City Inc",
+    "rating": 1,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff563909a7",
+    "name": "Pizza Tastey Inc",
+    "rating": 4,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff563909a8",
+    "name": "State Fish LLC",
+    "rating": 3,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff563909a9",
+    "name": "Lazy State LLC",
+    "rating": 1,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d07f486cff563909aa",
+    "name": "Kitchen Pizza Inc",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff563909ab",
+    "name": "Salty Goat Corporation",
+    "rating": 2,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d07f486cff563909ac",
+    "name": "Kitchen Kitchen Company",
+    "rating": 4,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff563909ad",
+    "name": "Fish Goat Inc",
+    "rating": 3,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff563909ae",
+    "name": "Fun Pizza Inc",
+    "rating": 3,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909af",
+    "name": "Lazy City Inc",
+    "rating": 2,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff563909b0",
+    "name": "Fish Big Inc",
+    "rating": 3,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff563909b1",
+    "name": "Salty Goat LLC",
+    "rating": 4,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff563909b2",
+    "name": "Sandwich City Corporation",
+    "rating": 3,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff563909b3",
+    "name": "City Lazy LLC",
+    "rating": 1,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d07f486cff563909b4",
+    "name": "Fun City Inc",
+    "rating": 5,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909b5",
+    "name": "Big Kitchen Inc",
+    "rating": 2,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff563909b6",
+    "name": "Pizza State Corporation",
+    "rating": 3,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909b7",
+    "name": "Goat Pizza LLC",
+    "rating": 3,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff563909b8",
+    "name": "Fun Goat Corporation",
+    "rating": 5,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909b9",
+    "name": "Big State Corporation",
+    "rating": 5,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d07f486cff563909ba",
+    "name": "Salty Kitchen Corporation",
+    "rating": 5,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909bb",
+    "name": "Fish Kitchen Inc",
+    "rating": 2,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff563909bc",
+    "name": "Animal City LLC",
+    "rating": 3,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff563909bd",
+    "name": "Salty Pizza Corporation",
+    "rating": 4,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909be",
+    "name": "Pizza Fun LLC",
+    "rating": 4,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff563909bf",
+    "name": "State Salty LLC",
+    "rating": 1,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d07f486cff563909c0",
+    "name": "Fish Sandwich LLC",
+    "rating": 5,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909c1",
+    "name": "Sandwich State Corporation",
+    "rating": 2,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff563909c2",
+    "name": "Fun Goat LLC",
+    "rating": 2,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909c3",
+    "name": "Animal Fun Inc",
+    "rating": 5,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff563909c4",
+    "name": "State Fun Corporation",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff563909c5",
+    "name": "Goat Fish Company",
+    "rating": 3,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff563909c6",
+    "name": "Sandwich Lazy Corporation",
+    "rating": 5,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff563909c7",
+    "name": "Goat State LLC",
+    "rating": 1,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff563909c8",
+    "name": "Tastey Salty LLC",
+    "rating": 3,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff563909c9",
+    "name": "Fun Fish Inc",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff563909ca",
+    "name": "Fish Big Company",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff563909cb",
+    "name": "Goat Salty Company",
+    "rating": 3,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909cc",
+    "name": "Animal Salty Corporation",
+    "rating": 2,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909cd",
+    "name": "Goat Lazy Company",
+    "rating": 1,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d07f486cff563909ce",
+    "name": "Sandwich City LLC",
+    "rating": 1,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909cf",
+    "name": "Pizza Big Inc",
+    "rating": 2,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff563909d0",
+    "name": "State Salty Company",
+    "rating": 2,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff563909d1",
+    "name": "Tastey Fish Inc",
+    "rating": 5,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909d2",
+    "name": "Tastey Fish Inc",
+    "rating": 3,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909d3",
+    "name": "Kitchen Fun Inc",
+    "rating": 2,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d07f486cff563909d4",
+    "name": "Lazy City Inc",
+    "rating": 2,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff563909d5",
+    "name": "Fun Fun Company",
+    "rating": 3,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d07f486cff563909d6",
+    "name": "City Tastey LLC",
+    "rating": 4,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d07f486cff563909d7",
+    "name": "Tastey City Corporation",
+    "rating": 3,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d07f486cff563909d8",
+    "name": "Fish Animal Company",
+    "rating": 2,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d07f486cff563909d9",
+    "name": "Lazy Salty Company",
+    "rating": 5,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909da",
+    "name": "Sandwich Goat Corporation",
+    "rating": 5,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909db",
+    "name": "Fish Kitchen Corporation",
+    "rating": 4,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909dc",
+    "name": "Tastey Fun Company",
+    "rating": 4,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909dd",
+    "name": "Pizza Salty Inc",
+    "rating": 3,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d07f486cff563909de",
+    "name": "State Salty Inc",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d07f486cff563909df",
+    "name": "Lazy Goat LLC",
+    "rating": 1,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff563909e0",
+    "name": "Goat Animal Corporation",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff563909e1",
+    "name": "State Fun LLC",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff563909e2",
+    "name": "Pizza Kitchen Company",
+    "rating": 2,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff563909e3",
+    "name": "Fish City LLC",
+    "rating": 2,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff563909e4",
+    "name": "Sandwich State Inc",
+    "rating": 5,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d17f486cff563909e5",
+    "name": "Fish State Corporation",
+    "rating": 1,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff563909e6",
+    "name": "Sandwich Big Corporation",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff563909e7",
+    "name": "Big Kitchen Inc",
+    "rating": 1,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff563909e8",
+    "name": "Goat Animal Corporation",
+    "rating": 1,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff563909e9",
+    "name": "Kitchen Kitchen Inc",
+    "rating": 3,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d17f486cff563909ea",
+    "name": "Fish Pizza LLC",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff563909eb",
+    "name": "Fun Tastey LLC",
+    "rating": 2,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff563909ec",
+    "name": "Big State Corporation",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff563909ed",
+    "name": "Kitchen Goat Inc",
+    "rating": 3,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff563909ee",
+    "name": "Kitchen Lazy Company",
+    "rating": 1,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d17f486cff563909ef",
+    "name": "City Animal Corporation",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff563909f0",
+    "name": "Fish Fun Corporation",
+    "rating": 1,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff563909f1",
+    "name": "State Tastey Company",
+    "rating": 1,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d17f486cff563909f2",
+    "name": "Fun Salty Company",
+    "rating": 1,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff563909f3",
+    "name": "Tastey Salty LLC",
+    "rating": 3,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff563909f4",
+    "name": "Pizza Big Corporation",
+    "rating": 1,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff563909f5",
+    "name": "Kitchen Salty Corporation",
+    "rating": 4,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff563909f6",
+    "name": "Big Fish Company",
+    "rating": 2,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d17f486cff563909f7",
+    "name": "Sandwich City LLC",
+    "rating": 5,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff563909f8",
+    "name": "Animal State Corporation",
+    "rating": 2,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d17f486cff563909f9",
+    "name": "Lazy Fun LLC",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d17f486cff563909fa",
+    "name": "Fish Tastey Inc",
+    "rating": 5,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff563909fb",
+    "name": "Big Lazy Corporation",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff563909fc",
+    "name": "Fish Lazy Company",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff563909fd",
+    "name": "Big Big Corporation",
+    "rating": 3,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff563909fe",
+    "name": "Sandwich Big LLC",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff563909ff",
+    "name": "Sandwich State Inc",
+    "rating": 3,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a00",
+    "name": "Animal Pizza LLC",
+    "rating": 4,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a01",
+    "name": "Big Lazy Corporation",
+    "rating": 2,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a02",
+    "name": "Goat Pizza LLC",
+    "rating": 3,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a03",
+    "name": "Kitchen Fun Corporation",
+    "rating": 5,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a04",
+    "name": "Goat Animal Inc",
+    "rating": 5,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a05",
+    "name": "Fish Animal Inc",
+    "rating": 1,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a06",
+    "name": "Fish Big Inc",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a07",
+    "name": "Pizza Animal Corporation",
+    "rating": 1,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a08",
+    "name": "Goat Fun LLC",
+    "rating": 1,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a09",
+    "name": "Pizza Lazy Inc",
+    "rating": 5,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a0a",
+    "name": "Sandwich Big Corporation",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a0b",
+    "name": "Salty Pizza LLC",
+    "rating": 2,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a0c",
+    "name": "State Fun Corporation",
+    "rating": 3,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a0d",
+    "name": "Pizza Tastey LLC",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a0e",
+    "name": "Tastey Goat Corporation",
+    "rating": 1,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a0f",
+    "name": "Big Fun Company",
+    "rating": 5,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a10",
+    "name": "City Lazy Inc",
+    "rating": 2,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a11",
+    "name": "City Sandwich Company",
+    "rating": 1,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a12",
+    "name": "Salty Lazy LLC",
+    "rating": 5,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a13",
+    "name": "Animal Animal LLC",
+    "rating": 1,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a14",
+    "name": "Fish City Inc",
+    "rating": 5,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a15",
+    "name": "City Fun LLC",
+    "rating": 2,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a16",
+    "name": "Tastey State LLC",
+    "rating": 3,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a17",
+    "name": "Big Lazy Corporation",
+    "rating": 1,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a18",
+    "name": "City Sandwich LLC",
+    "rating": 3,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a19",
+    "name": "Sandwich Lazy LLC",
+    "rating": 3,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a1a",
+    "name": "Big Animal Inc",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a1b",
+    "name": "Salty Animal Corporation",
+    "rating": 5,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a1c",
+    "name": "Lazy Kitchen Company",
+    "rating": 1,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a1d",
+    "name": "Fish City Company",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a1e",
+    "name": "Sandwich City Corporation",
+    "rating": 2,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a1f",
+    "name": "Animal Fish Corporation",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a20",
+    "name": "State Tastey Company",
+    "rating": 2,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a21",
+    "name": "Animal Salty LLC",
+    "rating": 4,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a22",
+    "name": "Big Fun Company",
+    "rating": 4,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a23",
+    "name": "Big Lazy Corporation",
+    "rating": 5,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a24",
+    "name": "Kitchen Fun Corporation",
+    "rating": 3,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a25",
+    "name": "Lazy Salty LLC",
+    "rating": 4,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a26",
+    "name": "Fun Lazy LLC",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a27",
+    "name": "Tastey Lazy Company",
+    "rating": 1,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a28",
+    "name": "Goat Tastey Company",
+    "rating": 3,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a29",
+    "name": "Sandwich Big Corporation",
+    "rating": 2,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a2a",
+    "name": "Goat Fun Inc",
+    "rating": 1,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a2b",
+    "name": "City State Corporation",
+    "rating": 4,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a2c",
+    "name": "Goat Big Inc",
+    "rating": 3,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a2d",
+    "name": "Goat Kitchen Corporation",
+    "rating": 3,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a2e",
+    "name": "Goat Fish Corporation",
+    "rating": 3,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a2f",
+    "name": "Lazy Lazy Inc",
+    "rating": 2,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a30",
+    "name": "Pizza Salty LLC",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a31",
+    "name": "Lazy Sandwich LLC",
+    "rating": 4,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a32",
+    "name": "Fun Tastey LLC",
+    "rating": 2,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a33",
+    "name": "State Fish Company",
+    "rating": 3,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a34",
+    "name": "Tastey Goat Inc",
+    "rating": 2,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a35",
+    "name": "Sandwich Pizza Company",
+    "rating": 1,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a36",
+    "name": "Animal Sandwich Company",
+    "rating": 3,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a37",
+    "name": "Sandwich Fun Inc",
+    "rating": 3,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a38",
+    "name": "Fish State Corporation",
+    "rating": 5,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a39",
+    "name": "Sandwich Fish Corporation",
+    "rating": 5,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a3a",
+    "name": "Pizza Pizza Company",
+    "rating": 2,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a3b",
+    "name": "Salty Fish Company",
+    "rating": 4,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a3c",
+    "name": "Goat Tastey Corporation",
+    "rating": 1,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a3d",
+    "name": "State Fun Corporation",
+    "rating": 4,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a3e",
+    "name": "Pizza State Corporation",
+    "rating": 4,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a3f",
+    "name": "Animal Lazy Company",
+    "rating": 2,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a40",
+    "name": "Fish Sandwich Corporation",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a41",
+    "name": "State Kitchen Company",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a42",
+    "name": "City Kitchen Company",
+    "rating": 1,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a43",
+    "name": "Salty Pizza Inc",
+    "rating": 1,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a44",
+    "name": "Lazy Fun Corporation",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a45",
+    "name": "Tastey City LLC",
+    "rating": 4,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a46",
+    "name": "Salty City Corporation",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a47",
+    "name": "Goat Animal Corporation",
+    "rating": 2,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a48",
+    "name": "Animal Pizza Company",
+    "rating": 5,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a49",
+    "name": "Kitchen Pizza LLC",
+    "rating": 2,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a4a",
+    "name": "Big Kitchen Company",
+    "rating": 1,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a4b",
+    "name": "Lazy Salty Inc",
+    "rating": 5,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a4c",
+    "name": "Goat Fun Inc",
+    "rating": 4,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a4d",
+    "name": "Fun State Corporation",
+    "rating": 4,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a4e",
+    "name": "Goat Tastey Corporation",
+    "rating": 5,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a4f",
+    "name": "Lazy Goat Corporation",
+    "rating": 5,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a50",
+    "name": "City Kitchen Company",
+    "rating": 4,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a51",
+    "name": "Fish Salty LLC",
+    "rating": 4,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a52",
+    "name": "Sandwich Lazy Inc",
+    "rating": 5,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a53",
+    "name": "Animal Kitchen Corporation",
+    "rating": 5,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a54",
+    "name": "Sandwich Pizza Corporation",
+    "rating": 2,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a55",
+    "name": "Fish Fun Company",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a56",
+    "name": "Pizza Goat Corporation",
+    "rating": 3,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a57",
+    "name": "Fun State Company",
+    "rating": 4,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a58",
+    "name": "Fish Pizza Corporation",
+    "rating": 5,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a59",
+    "name": "Fun Lazy Inc",
+    "rating": 5,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a5a",
+    "name": "Salty Sandwich Inc",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a5b",
+    "name": "Kitchen Tastey Corporation",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a5c",
+    "name": "Lazy Goat LLC",
+    "rating": 2,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a5d",
+    "name": "State Tastey LLC",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a5e",
+    "name": "Fish Big Company",
+    "rating": 2,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a5f",
+    "name": "Goat Big Corporation",
+    "rating": 4,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a60",
+    "name": "Sandwich Kitchen Inc",
+    "rating": 1,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a61",
+    "name": "Goat Big Inc",
+    "rating": 3,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a62",
+    "name": "Animal Animal Corporation",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a63",
+    "name": "Sandwich Kitchen Company",
+    "rating": 4,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a64",
+    "name": "Sandwich Fish Company",
+    "rating": 3,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a65",
+    "name": "Animal Animal Corporation",
+    "rating": 2,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a66",
+    "name": "Fun Tastey Inc",
+    "rating": 2,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a67",
+    "name": "City Goat Company",
+    "rating": 3,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a68",
+    "name": "Fun Fish Corporation",
+    "rating": 3,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a69",
+    "name": "Lazy Fun Inc",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a6a",
+    "name": "Salty Pizza Corporation",
+    "rating": 1,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a6b",
+    "name": "Big Tastey Corporation",
+    "rating": 3,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a6c",
+    "name": "Animal City LLC",
+    "rating": 4,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a6d",
+    "name": "Kitchen Tastey LLC",
+    "rating": 1,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a6e",
+    "name": "Pizza Animal Company",
+    "rating": 5,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a6f",
+    "name": "Goat Fish Company",
+    "rating": 5,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a70",
+    "name": "Fish Sandwich Company",
+    "rating": 3,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a71",
+    "name": "Pizza Salty Inc",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a72",
+    "name": "Fun Goat Company",
+    "rating": 5,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d17f486cff56390a73",
+    "name": "Sandwich Pizza LLC",
+    "rating": 3,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a74",
+    "name": "Goat Goat Corporation",
+    "rating": 2,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a75",
+    "name": "Sandwich Sandwich Company",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a76",
+    "name": "Kitchen Fish Corporation",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a77",
+    "name": "City Fish Inc",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a78",
+    "name": "Fun Big Company",
+    "rating": 1,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a79",
+    "name": "Goat Fun LLC",
+    "rating": 4,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a7a",
+    "name": "State Animal Company",
+    "rating": 1,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a7b",
+    "name": "State Salty Company",
+    "rating": 4,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a7c",
+    "name": "Fun Big Corporation",
+    "rating": 2,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a7d",
+    "name": "Lazy Big Inc",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a7e",
+    "name": "Lazy Goat LLC",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a7f",
+    "name": "City Big Corporation",
+    "rating": 1,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a80",
+    "name": "Salty Big Corporation",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a81",
+    "name": "Kitchen Fish Inc",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a82",
+    "name": "Pizza Big Corporation",
+    "rating": 2,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a83",
+    "name": "Tastey Kitchen Corporation",
+    "rating": 2,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a84",
+    "name": "Animal Sandwich Corporation",
+    "rating": 1,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a85",
+    "name": "Big Pizza Corporation",
+    "rating": 4,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a86",
+    "name": "Kitchen Fish Inc",
+    "rating": 5,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a87",
+    "name": "Sandwich Kitchen Inc",
+    "rating": 3,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a88",
+    "name": "Sandwich Lazy Company",
+    "rating": 1,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a89",
+    "name": "Lazy Animal LLC",
+    "rating": 5,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a8a",
+    "name": "Fish Fish LLC",
+    "rating": 4,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a8b",
+    "name": "Salty Fun Company",
+    "rating": 3,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a8c",
+    "name": "Sandwich City Inc",
+    "rating": 4,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a8d",
+    "name": "Big Animal LLC",
+    "rating": 2,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a8e",
+    "name": "Fun City Company",
+    "rating": 2,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a8f",
+    "name": "Goat State Company",
+    "rating": 4,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a90",
+    "name": "Animal Goat LLC",
+    "rating": 4,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a91",
+    "name": "City Sandwich Inc",
+    "rating": 3,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a92",
+    "name": "Pizza Tastey Company",
+    "rating": 5,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a93",
+    "name": "Salty State LLC",
+    "rating": 5,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a94",
+    "name": "Kitchen Fish LLC",
+    "rating": 4,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a95",
+    "name": "Tastey Salty Company",
+    "rating": 1,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a96",
+    "name": "State City Corporation",
+    "rating": 4,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a97",
+    "name": "City City Inc",
+    "rating": 1,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a98",
+    "name": "Goat Tastey LLC",
+    "rating": 4,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a99",
+    "name": "Lazy Salty Corporation",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a9a",
+    "name": "Kitchen Lazy LLC",
+    "rating": 1,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a9b",
+    "name": "Lazy Sandwich Company",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a9c",
+    "name": "Goat Big Company",
+    "rating": 1,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a9d",
+    "name": "Salty Fish LLC",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a9e",
+    "name": "Tastey Big Company",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390a9f",
+    "name": "Salty Big Company",
+    "rating": 4,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aa0",
+    "name": "Tastey Salty Company",
+    "rating": 2,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aa1",
+    "name": "Big Kitchen LLC",
+    "rating": 4,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aa2",
+    "name": "Fun Tastey LLC",
+    "rating": 1,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aa3",
+    "name": "Kitchen Salty LLC",
+    "rating": 2,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aa4",
+    "name": "Big Fish Corporation",
+    "rating": 4,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aa5",
+    "name": "Fun Animal Inc",
+    "rating": 4,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aa6",
+    "name": "Goat Tastey LLC",
+    "rating": 1,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aa7",
+    "name": "Salty City Company",
+    "rating": 2,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aa8",
+    "name": "City State Company",
+    "rating": 1,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aa9",
+    "name": "Salty Kitchen Corporation",
+    "rating": 5,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aaa",
+    "name": "Fish Fun Inc",
+    "rating": 3,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aab",
+    "name": "State Fun Company",
+    "rating": 5,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aac",
+    "name": "City Salty Inc",
+    "rating": 2,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aad",
+    "name": "Sandwich Fish LLC",
+    "rating": 4,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aae",
+    "name": "Sandwich Fish Corporation",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aaf",
+    "name": "Goat Pizza LLC",
+    "rating": 2,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390ab0",
+    "name": "Animal Kitchen Company",
+    "rating": 2,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390ab1",
+    "name": "Kitchen Fun Corporation",
+    "rating": 3,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d27f486cff56390ab2",
+    "name": "Lazy Kitchen Company",
+    "rating": 1,
+    "cuisine": "Sushi Bar"
+  },
+  {
+    "_id": "620bd7d27f486cff56390ab3",
+    "name": "Goat Animal LLC",
+    "rating": 5,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390ab4",
+    "name": "Animal Lazy Company",
+    "rating": 5,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d27f486cff56390ab5",
+    "name": "Big Lazy Corporation",
+    "rating": 1,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390ab6",
+    "name": "Fun Pizza Corporation",
+    "rating": 3,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d27f486cff56390ab7",
+    "name": "State Fun LLC",
+    "rating": 5,
+    "cuisine": "Italian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390ab8",
+    "name": "Sandwich City LLC",
+    "rating": 1,
+    "cuisine": "Mexican"
+  },
+  {
+    "_id": "620bd7d27f486cff56390ab9",
+    "name": "Salty Fun Company",
+    "rating": 3,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d27f486cff56390aba",
+    "name": "Goat Fun Corporation",
+    "rating": 3,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d27f486cff56390abb",
+    "name": "State Lazy Inc",
+    "rating": 3,
+    "cuisine": "Bar Food"
+  },
+  {
+    "_id": "620bd7d27f486cff56390abc",
+    "name": "City Salty Company",
+    "rating": 3,
+    "cuisine": "Vegetarian"
+  },
+  {
+    "_id": "620bd7d27f486cff56390abd",
+    "name": "Kitchen Salty LLC",
+    "rating": 1,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d27f486cff56390abe",
+    "name": "Goat Sandwich Company",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d27f486cff56390abf",
+    "name": "Fish Tastey Corporation",
+    "rating": 3,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d27f486cff56390ac0",
+    "name": "Sandwich City Company",
+    "rating": 1,
+    "cuisine": "American"
+  },
+  {
+    "_id": "620bd7d27f486cff56390ac1",
+    "name": "Fish State Company",
+    "rating": 2,
+    "cuisine": "Fast Food"
+  },
+  {
+    "_id": "620bd7d27f486cff56390ac2",
+    "name": "Fun City LLC",
+    "rating": 5,
+    "cuisine": "Pizza"
+  },
+  {
+    "_id": "620bd7d27f486cff56390ac3",
+    "name": "Sandwich State LLC",
+    "rating": 1,
+    "cuisine": "Vegetarian"
+  }
+]
