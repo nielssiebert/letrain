@@ -1,6 +1,7 @@
-from flask import Flask, request, Response
+from flask import Flask, request, Response, json
 from data.db import initialize_db
 from data.models import Valve, ValveTime
+from bson.json_util import dumps
 
 app = Flask(__name__)
 
@@ -26,7 +27,7 @@ def add_valve():
     body =request.get_json()
     valve = Valve(**body).save()
     id = valve.id
-    response = Response({'id': str(id)}, status=200)
+    response = Response(dumps({'id': str(id)}), mimetype="application/json", status=200)
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
@@ -34,14 +35,14 @@ def add_valve():
 def update_valve(id):
     body = request.get_json()
     Valve.objects.get(id=id).update(**body)
-    response = Response({'id': str(id)}, status=200)
+    response = Response(dumps({'id': str(id)}), mimetype="application/json", status=200)
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 @app.route('/valve/<id>', methods=['DELETE'])
 def delete_valve(id):
     Valve.objects.get(id=id).delete()
-    response = Response({'id': str(id)}, status=200)
+    response = Response(dumps({'id': str(id)}), mimetype="application/json", status=200)
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
