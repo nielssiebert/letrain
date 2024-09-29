@@ -1,0 +1,15 @@
+Flask
+Flask-CORS
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-HTTPAuth
+Flask-WTF
+Flask-RESTful
+Flask-Script
+RPi.GPIO
+werkzeug
+marshmallow
+# testing
+pytest
+gunicorn
+Flask-Testing
