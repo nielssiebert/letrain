@@ -171,6 +171,57 @@ run_tima_installer() {
   printf '%s\n' "${responses[@]}" | bash "$tima_install_script"
 }
 
+run_tima_installer_with_fallback() {
+  local tima_install_script="$1"
+  local tima_repo_input="$2"
+  local install_root="$3"
+  local stack_name="$4"
+  local domain="$5"
+  local app_prefix="$6"
+  local app_title="$7"
+  local translation_file="$8"
+  local icon_file="$9"
+  local use_own_nginx="${10}"
+  local enable_letsencrypt="${11}"
+  local letsencrypt_email="${12}"
+
+  if run_tima_installer \
+    "$tima_install_script" \
+    "$tima_repo_input" \
+    "$install_root" \
+    "$stack_name" \
+    "$domain" \
+    "$app_prefix" \
+    "$app_title" \
+    "$translation_file" \
+    "$icon_file" \
+    "$use_own_nginx" \
+    "$enable_letsencrypt" \
+    "$letsencrypt_email"; then
+    return
+  fi
+
+  if [[ -n "$translation_file" ]]; then
+    log "TiMa installer failed; retrying once with translation replacements disabled."
+    run_tima_installer \
+      "$tima_install_script" \
+      "$tima_repo_input" \
+      "$install_root" \
+      "$stack_name" \
+      "$domain" \
+      "$app_prefix" \
+      "$app_title" \
+      "" \
+      "$icon_file" \
+      "$use_own_nginx" \
+      "$enable_letsencrypt" \
+      "$letsencrypt_email"
+    return
+  fi
+
+  return 1
+}
+
 write_compose_launcher() {
   local launcher_path="$1"
   local stack_name="$2"
@@ -330,7 +381,7 @@ main() {
 
   install_consumer_packages
 
-  run_tima_installer \
+  run_tima_installer_with_fallback \
     "$tima_install_script" \
     "$tima_repo_path" \
     "$install_root" \
