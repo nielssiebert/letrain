@@ -358,6 +358,8 @@ main() {
   ensure_command docker
 
   local tima_repo_url="${TIMA_REPO_URL:-git@github.com:nielssiebert/TiMa.git}"
+  local tima_repo_input
+  tima_repo_input="$(git_repo_url_to_https "$tima_repo_url")"
   local tima_repo_path
   tima_repo_path="$(resolve_path "$SCRIPT_DIR/../TiMa")"
   ensure_tima_repository "$tima_repo_url" "$tima_repo_path"
@@ -402,7 +404,7 @@ main() {
 
   run_tima_installer_with_fallback \
     "$tima_install_script" \
-    "$tima_repo_path" \
+    "$tima_repo_input" \
     "$install_root" \
     "$stack_name" \
     "$domain" \
