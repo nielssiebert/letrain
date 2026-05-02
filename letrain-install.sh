@@ -80,6 +80,23 @@ ensure_command() {
   command -v "$cmd" >/dev/null 2>&1 || die "Missing required command: $cmd"
 }
 
+ensure_tima_repository() {
+  local repo_url="$1"
+  local repo_path="$2"
+
+  if [[ -d "$repo_path/.git" ]]; then
+    log "TiMa repository already exists at $repo_path"
+    return
+  fi
+
+  if [[ -e "$repo_path" ]]; then
+    die "Path exists but is not a git repository: $repo_path"
+  fi
+
+  log "Cloning TiMa repository from $repo_url to $repo_path"
+  git clone "$repo_url" "$repo_path"
+}
+
 install_consumer_packages() {
   if ! command -v apt-get >/dev/null 2>&1; then
     log "apt-get not available; skipping package installation."
@@ -245,11 +262,10 @@ main() {
   ensure_command git
   ensure_command docker
 
-  local default_tima_repo="$SCRIPT_DIR/../TiMa"
-  local tima_repo_input
-  tima_repo_input="$(prompt_default "TiMa repository URL or local path" "$default_tima_repo")"
+  local tima_repo_url="git@github.com:nielssiebert/TiMa.git"
   local tima_repo_path
-  tima_repo_path="$(resolve_path "$tima_repo_input")"
+  tima_repo_path="$(resolve_path "$SCRIPT_DIR/../TiMa")"
+  ensure_tima_repository "$tima_repo_url" "$tima_repo_path"
 
   local tima_install_script="$tima_repo_path/install.sh"
   [[ -f "$tima_install_script" ]] || die "TiMa install.sh not found at: $tima_install_script"
@@ -291,7 +307,7 @@ main() {
 
   run_tima_installer \
     "$tima_install_script" \
-    "$tima_repo_input" \
+    "$tima_repo_path" \
     "$install_root" \
     "$stack_name" \
     "$domain" \
