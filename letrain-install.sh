@@ -177,6 +177,8 @@ create_systemd_services() {
   local compose_launcher="$1"
   local consumer_script="$2"
   local consumer_env_file="$3"
+  local weather_script="$4"
+  local weather_env_file="$5"
 
   cat <<EOF | run_root tee /etc/systemd/system/letrain-tima.service >/dev/null
 [Unit]
@@ -214,9 +216,29 @@ RestartSec=2
 WantedBy=multi-user.target
 EOF
 
+  cat <<EOF | run_root tee /etc/systemd/system/letrain-weather-factor.service >/dev/null
+[Unit]
+Description=LeTrain weather factor publisher
+After=network-online.target letrain-tima.service
+Wants=network-online.target letrain-tima.service
+Requires=letrain-tima.service
+
+[Service]
+Type=simple
+EnvironmentFile=$weather_env_file
+WorkingDirectory=$SCRIPT_DIR
+ExecStart=/usr/bin/python3 $weather_script
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
   run_root systemctl daemon-reload
   run_root systemctl enable --now letrain-tima.service
   run_root systemctl enable --now letrain-consumer.service
+  run_root systemctl enable --now letrain-weather-factor.service
 }
 
 main() {
@@ -306,11 +328,32 @@ EOF
   local consumer_script="$SCRIPT_DIR/letrain-consumer.py"
   [[ -f "$consumer_script" ]] || die "Missing consumer script at: $consumer_script"
 
-  create_systemd_services "$compose_launcher" "$consumer_script" "$consumer_env"
+  local weather_env="$install_root/deploy/letrain-weather-factor.env"
+  cat > "$weather_env" <<EOF
+MQTT_HOST=127.0.0.1
+MQTT_PORT=1883
+MQTT_TOPIC=tima/factors/values
+MQTT_QOS=1
+FACTOR_ID=weather_forecast
+WEATHER_LATITUDE=52.52
+WEATHER_LONGITUDE=13.405
+WEATHER_TIMEZONE=auto
+WEATHER_API_BASE_URL=https://api.open-meteo.com/v1/forecast
+WEATHER_REQUEST_TIMEOUT_SECONDS=20
+WEATHER_PUBLISH_INTERVAL_SECONDS=43200
+WEATHER_RAIN_FULL_SCALE_MM=20.0
+LETRAIN_LOG_LEVEL=INFO
+EOF
+
+  local weather_script="$SCRIPT_DIR/letrain-weather-factor.py"
+  [[ -f "$weather_script" ]] || die "Missing weather publisher script at: $weather_script"
+
+  create_systemd_services "$compose_launcher" "$consumer_script" "$consumer_env" "$weather_script" "$weather_env"
 
   log "LeTrain installation complete."
   log "You can edit $consumer_env to tune MQTT topic and relay behavior."
-  log "Check status with: sudo systemctl status letrain-tima letrain-consumer"
+  log "You can edit $weather_env to tune weather location and publish cadence."
+  log "Check status with: sudo systemctl status letrain-tima letrain-consumer letrain-weather-factor"
 }
 
 main "$@"
