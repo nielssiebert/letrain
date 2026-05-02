@@ -376,7 +376,7 @@ main() {
   local app_prefix
   app_prefix="$(normalize_path_prefix "$(prompt_default "App path prefix" "/letrain")")"
   local app_title
-  app_title="$(prompt_default "Browser tab title" "LeTrain")"
+  app_title="$(prompt_default "Browser tab title" "Letrain")"
 
   local default_translation="$SCRIPT_DIR/translation-replacements.letrain.json"
   local translation_file
