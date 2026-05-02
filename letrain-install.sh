@@ -265,7 +265,7 @@ main() {
   local app_title
   app_title="$(prompt_default "Browser tab title" "LeTrain")"
 
-  local default_translation="$tima_repo_path/deploy/translation-replacements.valve.example.json"
+  local default_translation="translation-replacements.letrain.json"
   local translation_file
   translation_file="$(resolve_path "$(prompt_default "Translation replacement JSON file" "$default_translation")")"
   [[ -f "$translation_file" ]] || die "Translation file not found: $translation_file"

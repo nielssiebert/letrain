@@ -1,0 +1,13 @@
+{
+  "string_replacements": {
+    "ExecutionEventGroup": "ValveGroup",
+    "ExecutionEvent": "Valve",
+    "execution event groups": "valve groups",
+    "execution event group": "valve group",
+    "execution events": "valves",
+    "execution event": "valve"
+  },
+  "key_replacements": {
+    "en.app.title": "Letrain"
+  }
+}
