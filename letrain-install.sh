@@ -203,7 +203,7 @@ run_tima_installer_with_fallback() {
 
   if [[ -n "$translation_file" ]]; then
     log "TiMa installer failed; retrying once with translation replacements disabled."
-    run_tima_installer \
+    if run_tima_installer \
       "$tima_install_script" \
       "$tima_repo_input" \
       "$install_root" \
@@ -215,7 +215,26 @@ run_tima_installer_with_fallback() {
       "$icon_file" \
       "$use_own_nginx" \
       "$enable_letsencrypt" \
-      "$letsencrypt_email"
+      "$letsencrypt_email"; then
+      return
+    fi
+  fi
+
+  if [[ "$use_own_nginx" == "no" ]]; then
+    log "TiMa installer still failing; retrying once with external nginx mode enabled."
+    run_tima_installer \
+      "$tima_install_script" \
+      "$tima_repo_input" \
+      "$install_root" \
+      "$stack_name" \
+      "$domain" \
+      "$app_prefix" \
+      "$app_title" \
+      "" \
+      "$icon_file" \
+      "yes" \
+      "no" \
+      ""
     return
   fi
 
