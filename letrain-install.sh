@@ -80,6 +80,19 @@ ensure_command() {
   command -v "$cmd" >/dev/null 2>&1 || die "Missing required command: $cmd"
 }
 
+git_repo_url_to_https() {
+  local repo_url="$1"
+  if [[ "$repo_url" =~ ^git@([^:]+):(.+)$ ]]; then
+    printf 'https://%s/%s\n' "${BASH_REMATCH[1]}" "${BASH_REMATCH[2]}"
+    return
+  fi
+  if [[ "$repo_url" =~ ^ssh://git@([^/]+)/(.+)$ ]]; then
+    printf 'https://%s/%s\n' "${BASH_REMATCH[1]}" "${BASH_REMATCH[2]}"
+    return
+  fi
+  printf '%s\n' "$repo_url"
+}
+
 ensure_tima_repository() {
   local repo_url="$1"
   local repo_path="$2"
@@ -94,7 +107,19 @@ ensure_tima_repository() {
   fi
 
   log "Cloning TiMa repository from $repo_url to $repo_path"
-  git clone "$repo_url" "$repo_path"
+  if git clone "$repo_url" "$repo_path"; then
+    return
+  fi
+
+  local https_url
+  https_url="$(git_repo_url_to_https "$repo_url")"
+  if [[ "$https_url" == "$repo_url" ]]; then
+    die "Unable to clone TiMa repository from: $repo_url"
+  fi
+
+  log "SSH clone failed; retrying TiMa clone via HTTPS: $https_url"
+  rm -rf "$repo_path"
+  git clone "$https_url" "$repo_path" || die "Unable to clone TiMa repository from either SSH or HTTPS."
 }
 
 install_consumer_packages() {
@@ -262,7 +287,7 @@ main() {
   ensure_command git
   ensure_command docker
 
-  local tima_repo_url="git@github.com:nielssiebert/TiMa.git"
+  local tima_repo_url="${TIMA_REPO_URL:-git@github.com:nielssiebert/TiMa.git}"
   local tima_repo_path
   tima_repo_path="$(resolve_path "$SCRIPT_DIR/../TiMa")"
   ensure_tima_repository "$tima_repo_url" "$tima_repo_path"
@@ -281,7 +306,7 @@ main() {
   local app_title
   app_title="$(prompt_default "Browser tab title" "LeTrain")"
 
-  local default_translation="translation-replacements.letrain.json"
+  local default_translation="$SCRIPT_DIR/translation-replacements.letrain.json"
   local translation_file
   translation_file="$(resolve_path "$(prompt_default "Translation replacement JSON file" "$default_translation")")"
   [[ -f "$translation_file" ]] || die "Translation file not found: $translation_file"
