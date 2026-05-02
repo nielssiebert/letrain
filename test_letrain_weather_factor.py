@@ -99,14 +99,14 @@ class WeatherFactorTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "Weather request failed"):
                 weather_factor._fetch_today_rain_mm(settings)
 
-    def test_compute_factor_value_scales_between_one_and_point_two(self):
+    def test_compute_factor_value_scales_between_one_and_point_zero(self):
         self.assertEqual(weather_factor._compute_factor_value(0.0, 20.0), 1.0)
-        self.assertEqual(weather_factor._compute_factor_value(10.0, 20.0), 0.6)
-        self.assertEqual(weather_factor._compute_factor_value(20.0, 20.0), 0.2)
-        self.assertEqual(weather_factor._compute_factor_value(30.0, 20.0), 0.2)
+        self.assertEqual(weather_factor._compute_factor_value(10.0, 20.0), 0.5)
+        self.assertEqual(weather_factor._compute_factor_value(20.0, 20.0), 0.0)
+        self.assertEqual(weather_factor._compute_factor_value(30.0, 20.0), 0.0)
 
-    def test_compute_factor_value_returns_minimum_for_non_positive_scale(self):
-        self.assertEqual(weather_factor._compute_factor_value(5.0, 0.0), 0.2)
+    def test_compute_factor_value_uses_zero_as_minimum(self):
+        self.assertEqual(weather_factor._compute_factor_value(5.0, 0.0), 0.0)
 
     @unittest.skipUnless(
         os.getenv("RUN_ONLINE_TESTS") == "1",

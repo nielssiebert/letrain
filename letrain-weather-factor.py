@@ -104,11 +104,11 @@ def _fetch_today_rain_mm(settings: Settings) -> float:
 
 def _compute_factor_value(rain_mm: float, full_scale_mm: float) -> float:
     if full_scale_mm <= 0:
-        return 0.2
+        return 0.0
     capped_rain = min(max(rain_mm, 0.0), full_scale_mm)
     ratio = capped_rain / full_scale_mm
-    factor = 1.0 - (0.8 * ratio)
-    return round(min(max(factor, 0.2), 1.0), 3)
+    factor = 1.0 - ratio
+    return round(min(max(factor, 0.0), 1.0), 3)
 
 
 def _build_factor_payload(settings: Settings, rain_mm: float, factor_value: float) -> dict:
