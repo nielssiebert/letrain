@@ -1,9 +1,9 @@
-# LeTrain Setup Guide (Fresh Raspberry Pi)
+# Letrain Setup Guide (Fresh Raspberry Pi)
 
-This guide walks you through a full LeTrain installation on a clean Raspberry Pi OS system.
-It also explains every environment variable used by LeTrain scripts and services, with their runtime impact.
+This guide walks you through a full Letrain installation on a clean Raspberry Pi OS system.
+It also explains every environment variable used by Letrain scripts and services, with their runtime impact.
 
-## What LeTrain Installs
+## What Letrain Installs
 
 Running `./letrain-install.sh` sets up three systemd services:
 
@@ -25,7 +25,7 @@ sudo apt-get upgrade -y
 
 ## 2. Install Prerequisites
 
-LeTrain installer requires at least `git` and `docker` to be available.
+Letrain installer requires at least `git` and `docker` to be available.
 
 1. Install required packages:
 
@@ -47,7 +47,7 @@ sudo usermod -aG docker "$USER"
 
 4. Log out and back in once (or reboot) so group changes apply.
 
-## 3. Clone LeTrain
+## 3. Clone Letrain
 
 Choose a working directory and clone:
 
@@ -66,11 +66,11 @@ Start installation:
 ./letrain-install.sh
 ```
 
-The script clones TiMa (if needed), runs TiMa's installer, writes LeTrain env files, creates systemd units, and starts services.
+The script clones TiMa (if needed), runs TiMa's installer, writes Letrain env files, creates systemd units, and starts services.
 
 ### Installer Prompts and Recommended Answers
 
-1. `LeTrain install root directory` (default: `~/letrain-deploy`)
+1. `Letrain install root directory` (default: `~/letrain-deploy`)
 - Where deployment artifacts and env files are stored.
 - Keep default unless you need another disk/path.
 
@@ -90,7 +90,7 @@ The script clones TiMa (if needed), runs TiMa's installer, writes LeTrain env fi
 - UI title branding.
 
 6. `Translation replacement JSON file` (default: `translation-replacements.letrain.json`)
-- Replacement map used while integrating LeTrain branding text.
+- Replacement map used while integrating Letrain branding text.
 
 7. `Custom icon file` (default: `Letrain.png`)
 - UI icon/branding asset.
@@ -127,7 +127,7 @@ sudo journalctl -u letrain-tima -u letrain-consumer -u letrain-weather-factor -n
 
 ## 6. Edit Runtime Environment Variables
 
-After install, LeTrain writes two runtime env files:
+After install, Letrain writes two runtime env files:
 
 - `~/letrain-deploy/deploy/letrain-consumer.env`
 - `~/letrain-deploy/deploy/letrain-weather-factor.env`
@@ -142,7 +142,7 @@ sudo systemctl restart letrain-consumer letrain-weather-factor
 
 ## 7. Full Environment Variable Reference
 
-This section covers all env vars consumed directly by LeTrain code or LeTrain installer.
+This section covers all env vars consumed directly by Letrain code or Letrain installer.
 
 ## 7.1 Installer-Level Variable
 
@@ -347,7 +347,7 @@ These variables are only used by `test_letrain_weather_factor.py` when running o
 ## 9. Service Management Cheat Sheet
 
 ```bash
-# Restart all LeTrain services
+# Restart all Letrain services
 sudo systemctl restart letrain-tima letrain-consumer letrain-weather-factor
 
 # Tail consumer logs
@@ -362,7 +362,7 @@ sudo systemctl --failed --no-legend
 
 ## Notes About TiMa `.env`
 
-LeTrain also relies on TiMa-generated deployment variables in `~/letrain-deploy/deploy/.env`.
+Letrain also relies on TiMa-generated deployment variables in `~/letrain-deploy/deploy/.env`.
 Those variables are owned by the TiMa project and can vary by TiMa version.
 
-For LeTrain operation, the variables documented above are the complete set directly consumed by LeTrain installer and LeTrain Python services.
+For Letrain operation, the variables documented above are the complete set directly consumed by Letrain installer and Letrain Python services.
