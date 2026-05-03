@@ -6,6 +6,7 @@ import logging
 import os
 import signal
 import sys
+import time
 import uuid
 from dataclasses import dataclass
 from datetime import datetime
@@ -26,6 +27,7 @@ class Settings:
     mqtt_port: int
     mqtt_topic: str
     mqtt_qos: int
+    mqtt_operation_timeout_seconds: int
     factor_id: str
     latitude: float
     longitude: float
@@ -42,6 +44,7 @@ class Settings:
             mqtt_port=_parse_int("MQTT_PORT", 1883),
             mqtt_topic=os.getenv("MQTT_TOPIC", "tima/factors/values"),
             mqtt_qos=_parse_int("MQTT_QOS", 1),
+            mqtt_operation_timeout_seconds=_parse_int("MQTT_OPERATION_TIMEOUT_SECONDS", 15),
             factor_id=os.getenv("FACTOR_ID", "weather_forecast"),
             latitude=_parse_float("WEATHER_LATITUDE", 52.52),
             longitude=_parse_float("WEATHER_LONGITUDE", 13.405),
@@ -116,28 +119,58 @@ def _build_factor_payload(settings: Settings, rain_mm: float, factor_value: floa
         "message_id": str(uuid.uuid4()),
         "current_timestamp": datetime.now().astimezone().isoformat(),
         "factor_id": settings.factor_id,
+        "id": settings.factor_id,
         "value": factor_value,
         "rain_mm_today": round(rain_mm, 2),
         "source": "open-meteo",
     }
 
 
-def _publish_factor(settings: Settings, payload: dict) -> None:
+def _wait_for_publish_ack(
+    publish_info: mqtt.MQTTMessageInfo,
+    timeout_seconds: int,
+    stop_event: Event | None = None,
+) -> None:
+    # paho-mqtt QoS1 needs a running network loop to receive PUBACK.
+    deadline = time.monotonic() + max(timeout_seconds, 1)
+    while not publish_info.is_published():
+        if stop_event is not None and stop_event.is_set():
+            raise RuntimeError("Publish interrupted by shutdown signal")
+        if time.monotonic() >= deadline:
+            raise RuntimeError("Timed out waiting for MQTT publish acknowledgment")
+        time.sleep(0.05)
+
+
+def _publish_factor(settings: Settings, payload: dict, stop_event: Event | None = None) -> None:
     client = mqtt.Client(client_id="letrain-weather-factor")
-    client.connect(settings.mqtt_host, settings.mqtt_port, keepalive=60)
-    info = client.publish(settings.mqtt_topic, json.dumps(payload), qos=settings.mqtt_qos)
-    info.wait_for_publish()
-    client.disconnect()
+    client.loop_start()
+    try:
+        client.connect(settings.mqtt_host, settings.mqtt_port, keepalive=60)
+        info = client.publish(settings.mqtt_topic, json.dumps(payload), qos=settings.mqtt_qos)
+        if info.rc != mqtt.MQTT_ERR_SUCCESS:
+            raise RuntimeError(f"MQTT publish failed with rc={info.rc}")
+        _wait_for_publish_ack(
+            info,
+            timeout_seconds=settings.mqtt_operation_timeout_seconds,
+            stop_event=stop_event,
+        )
+    finally:
+        try:
+            client.disconnect()
+        except Exception:
+            pass
+        client.loop_stop()
 
 
-def _publish_current_weather_factor(settings: Settings) -> None:
+def _publish_current_weather_factor(settings: Settings, stop_event: Event | None = None) -> None:
     rain_mm = _fetch_today_rain_mm(settings)
     factor_value = _compute_factor_value(rain_mm, settings.rain_full_scale_mm)
     payload = _build_factor_payload(settings, rain_mm, factor_value)
-    _publish_factor(settings, payload)
+    _publish_factor(settings, payload, stop_event=stop_event)
     LOGGER.info(
-        "Published factor %s value=%s rain_mm_today=%s",
+        "Published factor %s to topic %s value=%s rain_mm_today=%s",
         settings.factor_id,
+        settings.mqtt_topic,
         factor_value,
         round(rain_mm, 2),
     )
@@ -163,7 +196,7 @@ def main() -> int:
 
     while not stop_event.is_set():
         try:
-            _publish_current_weather_factor(settings)
+            _publish_current_weather_factor(settings, stop_event=stop_event)
         except Exception as exc:  # pragma: no cover - runtime guard
             LOGGER.error("Weather factor publish failed: %s", exc)
         stop_event.wait(settings.publish_interval_seconds)

@@ -342,6 +342,7 @@ WorkingDirectory=$SCRIPT_DIR
 ExecStart=/usr/bin/python3 $weather_script
 Restart=always
 RestartSec=10
+TimeoutStopSec=20
 
 [Install]
 WantedBy=multi-user.target
@@ -447,6 +448,7 @@ MQTT_HOST=127.0.0.1
 MQTT_PORT=1883
 MQTT_TOPIC=tima/factors/values
 MQTT_QOS=1
+MQTT_OPERATION_TIMEOUT_SECONDS=15
 FACTOR_ID=weather_forecast
 WEATHER_LATITUDE=52.52
 WEATHER_LONGITUDE=13.405

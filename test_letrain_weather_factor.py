@@ -3,6 +3,7 @@ import json
 import os
 import pathlib
 import sys
+import time
 import types
 import unittest
 from urllib.error import URLError
@@ -51,6 +52,7 @@ class WeatherFactorTests(unittest.TestCase):
             "mqtt_port": 1883,
             "mqtt_topic": "tima/factors/values",
             "mqtt_qos": 1,
+            "mqtt_operation_timeout_seconds": 15,
             "factor_id": "weather_forecast",
             "latitude": 52.52,
             "longitude": 13.405,
@@ -107,6 +109,50 @@ class WeatherFactorTests(unittest.TestCase):
 
     def test_compute_factor_value_uses_zero_as_minimum(self):
         self.assertEqual(weather_factor._compute_factor_value(5.0, 0.0), 0.0)
+
+    def test_build_factor_payload_contains_id_alias_for_compatibility(self):
+        settings = self._settings(factor_id="weather_forecast")
+
+        payload = weather_factor._build_factor_payload(
+            settings=settings,
+            rain_mm=5.0,
+            factor_value=0.75,
+        )
+
+        self.assertEqual(payload["factor_id"], "weather_forecast")
+        self.assertEqual(payload["id"], "weather_forecast")
+
+    def test_wait_for_publish_ack_returns_when_published(self):
+        class _PublishedInfo:
+            def is_published(self):
+                return True
+
+        weather_factor._wait_for_publish_ack(_PublishedInfo(), timeout_seconds=1)
+
+    def test_wait_for_publish_ack_times_out(self):
+        class _NeverPublishedInfo:
+            def is_published(self):
+                return False
+
+        start = time.monotonic()
+        with self.assertRaisesRegex(RuntimeError, "Timed out waiting for MQTT publish acknowledgment"):
+            weather_factor._wait_for_publish_ack(_NeverPublishedInfo(), timeout_seconds=1)
+        self.assertGreaterEqual(time.monotonic() - start, 1.0)
+
+    def test_wait_for_publish_ack_honors_stop_event(self):
+        class _NeverPublishedInfo:
+            def is_published(self):
+                return False
+
+        stop_event = weather_factor.Event()
+        stop_event.set()
+
+        with self.assertRaisesRegex(RuntimeError, "Publish interrupted by shutdown signal"):
+            weather_factor._wait_for_publish_ack(
+                _NeverPublishedInfo(),
+                timeout_seconds=5,
+                stop_event=stop_event,
+            )
 
     @unittest.skipUnless(
         os.getenv("RUN_ONLINE_TESTS") == "1",
