@@ -428,6 +428,8 @@ main() {
   app_prefix="$(normalize_path_prefix "$(prompt_default "App path prefix" "/letrain")")"
   local app_title
   app_title="$(prompt_default "Browser tab title" "Letrain")"
+  local allowed_pins
+  allowed_pins="$(prompt_default "Allowed relay pins (comma-separated BCM numbers)" "16,19,20,26")"
 
   local default_translation="$SCRIPT_DIR/translation-replacements.letrain.json"
   local translation_file
@@ -492,6 +494,7 @@ MQTT_PORT=1883
 MQTT_TOPIC=tima/execution-events
 MQTT_QOS=1
 RELAY_ACTIVE_LOW=false
+LETRAIN_ALLOWED_PINS=$allowed_pins
 LETRAIN_LOG_LEVEL=INFO
 EOF
 

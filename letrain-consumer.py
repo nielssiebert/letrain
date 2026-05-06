@@ -2,21 +2,43 @@
 from __future__ import annotations
 
 import json
+import importlib
 import logging
 import os
 import signal
 import sys
 from dataclasses import dataclass
+from typing import Iterable, Literal, Optional, Protocol, cast
 
 import paho.mqtt.client as mqtt
 
 try:
-    import RPi.GPIO as GPIO
+    _GPIO = importlib.import_module("RPi.GPIO")
 except ImportError:  # pragma: no cover - only used on non-RPi hosts
-    GPIO = None
+    _GPIO = None
+
+
+GpioValue = Literal[0, 1]
+
+
+class _GpioProtocol(Protocol):
+    BCM: str
+    OUT: str
+    HIGH: GpioValue
+    LOW: GpioValue
+
+    def setwarnings(self, enabled: bool) -> None: ...
+    def setmode(self, mode: str) -> None: ...
+    def setup(self, pin: int, mode: str, initial: GpioValue) -> None: ...
+    def output(self, pin: int, value: GpioValue) -> None: ...
+    def cleanup(self) -> None: ...
+
+
+GPIO = cast(Optional[_GpioProtocol], _GPIO)
 
 
 LOGGER = logging.getLogger("letrain-consumer")
+DEFAULT_ALLOWED_PINS = (16, 19, 20, 26)
 
 
 @dataclass(frozen=True)
@@ -26,28 +48,54 @@ class Settings:
     mqtt_topic: str
     mqtt_qos: int
     relay_active_low: bool
+    allowed_pins: tuple[int, ...]
     default_pin: int | None
 
     @classmethod
     def from_env(cls) -> "Settings":
+        allowed_pins = _parse_pin_list("LETRAIN_ALLOWED_PINS", DEFAULT_ALLOWED_PINS)
+        default_pin = _parse_optional_int("LETRAIN_DEFAULT_PIN")
+        if default_pin is not None and default_pin not in allowed_pins:
+            LOGGER.warning(
+                "LETRAIN_DEFAULT_PIN=%s is not included in LETRAIN_ALLOWED_PINS=%s",
+                default_pin,
+                ",".join(str(pin) for pin in allowed_pins),
+            )
         return cls(
             mqtt_host=os.getenv("MQTT_HOST", "127.0.0.1"),
             mqtt_port=_parse_int("MQTT_PORT", 1883),
             mqtt_topic=os.getenv("MQTT_TOPIC", "tima/execution-events"),
             mqtt_qos=_parse_int("MQTT_QOS", 1),
             relay_active_low=_parse_bool("RELAY_ACTIVE_LOW", False),
-            default_pin=_parse_optional_int("LETRAIN_DEFAULT_PIN"),
+            allowed_pins=allowed_pins,
+            default_pin=default_pin,
         )
 
 
 class RelayController:
-    def __init__(self, active_low: bool) -> None:
+    def __init__(self, active_low: bool, allowed_pins: Iterable[int]) -> None:
         self._active_low = active_low
+        self._allowed_pins = set(allowed_pins)
         self._gpio_enabled = GPIO is not None
         self._initialized = False
         self._configured_pins: set[int] = set()
 
+    def initialize_pins(self) -> None:
+        self._initialize_gpio()
+        _on_value, off_value = self._on_off_values()
+        for pin in sorted(self._allowed_pins):
+            if not self._gpio_enabled:
+                continue
+            self._setup_pin_if_needed(pin, off_value)
+        LOGGER.info(
+            "Allowed relay pins: %s",
+            ",".join(str(pin) for pin in sorted(self._allowed_pins)),
+        )
+
     def set_pin_state(self, pin: int, enabled: bool) -> None:
+        if pin not in self._allowed_pins:
+            LOGGER.warning("Ignoring pin %s because it is not in LETRAIN_ALLOWED_PINS", pin)
+            return
         self._initialize_gpio()
         on_value, off_value = self._on_off_values()
         target_value = on_value if enabled else off_value
@@ -57,12 +105,14 @@ class RelayController:
             return
 
         self._setup_pin_if_needed(pin, off_value)
-        GPIO.output(pin, target_value)
+        gpio = self._require_gpio()
+        gpio.output(pin, target_value)
         LOGGER.info("Pin %s -> %s", pin, enabled)
 
     def cleanup(self) -> None:
         if self._gpio_enabled and self._initialized:
-            GPIO.cleanup()
+            gpio = self._require_gpio()
+            gpio.cleanup()
             self._initialized = False
 
     def _initialize_gpio(self) -> None:
@@ -72,20 +122,28 @@ class RelayController:
             LOGGER.warning("RPi.GPIO not available; running in dry-run mode")
             self._initialized = True
             return
-        GPIO.setwarnings(False)
-        GPIO.setmode(GPIO.BCM)
+        gpio = self._require_gpio()
+        gpio.setwarnings(False)
+        gpio.setmode(gpio.BCM)
         self._initialized = True
 
-    def _setup_pin_if_needed(self, pin: int, initial_value: int) -> None:
+    def _setup_pin_if_needed(self, pin: int, initial_value: GpioValue) -> None:
         if pin in self._configured_pins:
             return
-        GPIO.setup(pin, GPIO.OUT, initial=initial_value)
+        gpio = self._require_gpio()
+        gpio.setup(pin, gpio.OUT, initial=initial_value)
         self._configured_pins.add(pin)
 
-    def _on_off_values(self) -> tuple[int, int]:
+    def _on_off_values(self) -> tuple[GpioValue, GpioValue]:
+        gpio = self._require_gpio()
         if self._active_low:
-            return GPIO.LOW, GPIO.HIGH
-        return GPIO.HIGH, GPIO.LOW
+            return gpio.LOW, gpio.HIGH
+        return gpio.HIGH, gpio.LOW
+
+    def _require_gpio(self) -> _GpioProtocol:
+        if GPIO is None:
+            raise RuntimeError("RPi.GPIO not available")
+        return GPIO
 
 
 def _parse_bool(name: str, default: bool) -> bool:
@@ -116,6 +174,30 @@ def _parse_optional_int(name: str) -> int | None:
     except ValueError:
         LOGGER.warning("Invalid integer for %s=%s; ignoring", name, value)
         return None
+
+
+def _parse_pin_list(name: str, default: tuple[int, ...]) -> tuple[int, ...]:
+    value = os.getenv(name)
+    if value is None or value.strip() == "":
+        return default
+
+    pins: list[int] = []
+    for raw_item in value.split(","):
+        item = raw_item.strip()
+        if item == "":
+            continue
+        try:
+            pin = int(item)
+        except ValueError:
+            LOGGER.warning("Invalid pin in %s=%s; ignoring %s", name, value, item)
+            continue
+        if pin not in pins:
+            pins.append(pin)
+
+    if not pins:
+        LOGGER.warning("No valid pins found in %s=%s; using default %s", name, value, default)
+        return default
+    return tuple(pins)
 
 
 def _parse_pin(payload: dict, fallback_pin: int | None) -> int | None:
@@ -170,7 +252,8 @@ def main() -> int:
         format="%(asctime)s %(levelname)s %(name)s %(message)s",
     )
     settings = Settings.from_env()
-    relay_controller = RelayController(settings.relay_active_low)
+    relay_controller = RelayController(settings.relay_active_low, settings.allowed_pins)
+    relay_controller.initialize_pins()
 
     client = mqtt.Client(client_id="letrain-consumer")
     client.on_connect = lambda c, _u, _f, _rc: c.subscribe(settings.mqtt_topic, qos=settings.mqtt_qos)

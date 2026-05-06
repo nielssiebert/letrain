@@ -89,20 +89,24 @@ The script clones TiMa (if needed), runs TiMa's installer, writes Letrain env fi
 5. `Browser tab title` (default: `Letrain`)
 - UI title branding.
 
-6. `Translation replacement JSON file` (default: `translation-replacements.letrain.json`)
+6. `Allowed relay pins (comma-separated BCM numbers)` (default: `16,19,20,26`)
+- Whitelist of GPIO pins the consumer may initialize and switch.
+- These pins are initialized once during consumer startup.
+
+7. `Translation replacement JSON file` (default: `translation-replacements.letrain.json`)
 - Replacement map used while integrating Letrain branding text.
 
-7. `Custom icon file` (default: `Letrain.png`)
+8. `Custom icon file` (default: `Letrain.png`)
 - UI icon/branding asset.
 
-8. `Use your own nginx instance` (`yes`/`no`, default: `no`)
+9. `Use your own nginx instance` (`yes`/`no`, default: `no`)
 - `no`: stack includes nginx service.
 - `yes`: stack excludes nginx; you must reverse-proxy yourself.
 
-9. `Enable Let's Encrypt + certbot` (shown only if domain is not `localhost` and own nginx is `no`)
+10. `Enable Let's Encrypt + certbot` (shown only if domain is not `localhost` and own nginx is `no`)
 - Enables certbot-based TLS provisioning.
 
-10. `Let's Encrypt email` (shown only when LE is enabled)
+11. `Let's Encrypt email` (shown only when LE is enabled)
 - Contact email for certificate management.
 
 ## 5. Verify Services
@@ -281,6 +285,14 @@ Payload behavior summary:
 - If action is missing/other value: message ignored.
 - Pin source: payload `pin` first, then `LETRAIN_DEFAULT_PIN`.
 
+### `LETRAIN_ALLOWED_PINS`
+- Default: `16,19,20,26`
+- Used by: consumer GPIO setup and runtime pin validation
+- Impact:
+  - Defines the whitelist of BCM GPIO pins that Letrain may initialize or switch.
+  - All pins in this list are initialized once during consumer startup to the OFF state.
+  - Any payload pin or `LETRAIN_DEFAULT_PIN` outside this list is ignored with a warning.
+
 ## 7.5 Weather-Service Variables (`letrain-weather-factor.env`)
 
 ### `MQTT_OPERATION_TIMEOUT_SECONDS`
@@ -353,6 +365,7 @@ Payload behavior summary:
 - Integer vars: invalid values are ignored and replaced by built-in defaults (warning logged).
 - Float vars: invalid values are ignored and replaced by built-in defaults (warning logged).
 - Bool var (`RELAY_ACTIVE_LOW`): only explicit truthy values become true.
+- Pin list var (`LETRAIN_ALLOWED_PINS`): invalid entries are ignored; if no valid pins remain, the default whitelist is used.
 - Missing critical values do not crash startup in most cases because defaults are used.
   - This improves resilience but can hide misconfiguration if logs are not monitored.
 
@@ -393,10 +406,13 @@ These variables are only used by `test_letrain_weather_factor.py` when running o
 2. Use one fixed relay GPIO pin:
 - Add `LETRAIN_DEFAULT_PIN=17` to `letrain-consumer.env`.
 
-3. Tune weather aggressiveness:
+3. Restrict which GPIO pins may ever be switched:
+- Set `LETRAIN_ALLOWED_PINS=16,19,20,26` in `letrain-consumer.env`.
+
+4. Tune weather aggressiveness:
 - Reduce `WEATHER_RAIN_FULL_SCALE_MM` to make factor react more strongly to small rain forecasts.
 
-4. Increase debug logging temporarily:
+5. Increase debug logging temporarily:
 - Set `LETRAIN_LOG_LEVEL=DEBUG` and restart services.
 
 ## 9. Service Management Cheat Sheet
