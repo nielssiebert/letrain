@@ -80,6 +80,56 @@ ensure_command() {
   command -v "$cmd" >/dev/null 2>&1 || die "Missing required command: $cmd"
 }
 
+read_env_file_value() {
+  local file_path="$1"
+  local key="$2"
+  local default_value="$3"
+
+  if [[ ! -f "$file_path" ]]; then
+    printf '%s\n' "$default_value"
+    return
+  fi
+
+  local value
+  value="$(grep -E "^${key}=" "$file_path" | tail -n 1 | cut -d'=' -f2- || true)"
+  if [[ -z "$value" ]]; then
+    printf '%s\n' "$default_value"
+    return
+  fi
+  printf '%s\n' "$value"
+}
+
+upsert_env_file_value() {
+  local file_path="$1"
+  local key="$2"
+  local value="$3"
+  local tmp_file
+
+  if [[ ! -f "$file_path" ]]; then
+    printf '%s=%s\n' "$key" "$value" > "$file_path"
+    return
+  fi
+
+  tmp_file="$(mktemp)"
+  awk -v key="$key" -v value="$value" '
+    BEGIN { updated = 0 }
+    index($0, key "=") == 1 {
+      if (!updated) {
+        print key "=" value
+        updated = 1
+      }
+      next
+    }
+    { print }
+    END {
+      if (!updated) {
+        print key "=" value
+      }
+    }
+  ' "$file_path" > "$tmp_file"
+  mv "$tmp_file" "$file_path"
+}
+
 git_repo_url_to_https() {
   local repo_url="$1"
   if [[ "$repo_url" =~ ^git@([^:]+):(.+)$ ]]; then
@@ -422,6 +472,12 @@ main() {
   [[ -f "$deploy_env" ]] || die "Expected deploy env file not found: $deploy_env"
   [[ -f "$compose_file" ]] || die "Expected compose file not found: $compose_file"
 
+  local scheduler_timezone="${SCHEDULER_TIMEZONE:-}"
+  if [[ -z "$scheduler_timezone" ]]; then
+    scheduler_timezone="$(read_env_file_value "$deploy_env" "SCHEDULER_TIMEZONE" "${TZ:-Europe/Berlin}")"
+  fi
+  upsert_env_file_value "$deploy_env" "SCHEDULER_TIMEZONE" "$scheduler_timezone"
+
   local compose_launcher="$install_root/deploy/letrain-compose.sh"
   local services_csv="mosquitto backend"
   if [[ "$use_own_nginx" == "no" ]]; then
@@ -468,6 +524,7 @@ EOF
   log "LeTrain installation complete."
   log "You can edit $consumer_env to tune MQTT topic and relay behavior."
   log "You can edit $weather_env to tune weather location and publish cadence."
+  log "You can edit $deploy_env to tune TiMa backend variables such as SCHEDULER_TIMEZONE."
   log "Check status with: sudo systemctl status letrain-tima letrain-consumer letrain-weather-factor"
 }
 

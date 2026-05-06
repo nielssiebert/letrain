@@ -127,24 +127,28 @@ sudo journalctl -u letrain-tima -u letrain-consumer -u letrain-weather-factor -n
 
 ## 6. Edit Runtime Environment Variables
 
-After install, Letrain writes two runtime env files:
+After install, Letrain writes two service env files and also keeps TiMa backend env values in the generated deploy env file:
 
 - `~/letrain-deploy/deploy/letrain-consumer.env`
 - `~/letrain-deploy/deploy/letrain-weather-factor.env`
+- `~/letrain-deploy/deploy/.env`
 
 If you changed install root, replace `~/letrain-deploy` with your chosen path.
+
+Use `letrain-consumer.env` and `letrain-weather-factor.env` for the two Python services.
+Use `.env` for TiMa backend/runtime variables such as `SCHEDULER_TIMEZONE`, `SCHEDULER_ENABLED`, `SCHEDULER_TICK_SECONDS`, `MESSAGE_RETENTION_DAYS`, and `SECRET_KEY`.
 
 After edits, restart services:
 
 ```bash
-sudo systemctl restart letrain-consumer letrain-weather-factor
+sudo systemctl restart letrain-tima letrain-consumer letrain-weather-factor
 ```
 
 ## 7. Full Environment Variable Reference
 
 This section covers all env vars consumed directly by Letrain code or Letrain installer.
 
-## 7.1 Installer-Level Variable
+## 7.1 Installer-Level Variables
 
 ### `TIMA_REPO_URL`
 - Default: `git@github.com:nielssiebert/TiMa.git`
@@ -160,7 +164,58 @@ Example:
 TIMA_REPO_URL=https://github.com/nielssiebert/TiMa.git ./letrain-install.sh
 ```
 
-## 7.2 Shared MQTT Variables (Used by Consumer and Weather Service)
+### `SCHEDULER_TIMEZONE`
+- Default: current `SCHEDULER_TIMEZONE`, else current `TZ`, else `Europe/Berlin`
+- Used by: `letrain-install.sh`
+- Impact:
+  - Written into `~/letrain-deploy/deploy/.env` as TiMa backend `SCHEDULER_TIMEZONE`.
+  - Weekly and one-time triggers are evaluated in this timezone.
+  - Wrong value typically shows up as triggers firing at the wrong wall-clock time.
+
+Example:
+
+```bash
+SCHEDULER_TIMEZONE=Europe/Berlin ./letrain-install.sh
+```
+
+## 7.2 TiMa Backend Variables (`deploy/.env`)
+
+These variables are consumed by the TiMa backend started by `letrain-tima.service`.
+
+### `SCHEDULER_TIMEZONE`
+- Default written by installer: current `SCHEDULER_TIMEZONE`, else current `TZ`, else `Europe/Berlin`
+- Used by: TiMa scheduler
+- Impact:
+  - Defines the timezone used for weekly and one-time trigger evaluation.
+  - Set this to the Raspberry Pi's actual local timezone if wall-clock schedules must match local time.
+
+### `SCHEDULER_ENABLED`
+- Default: `true`
+- Used by: TiMa backend startup
+- Impact:
+  - Enables the scheduler loop that evaluates triggers.
+  - If set to `false`, manual sequence execution still works, but time-based triggers do not run.
+
+### `SCHEDULER_TICK_SECONDS`
+- Default: `30`
+- Used by: TiMa scheduler polling loop
+- Impact:
+  - Controls how often the scheduler scans for triggers due in the near future.
+  - Smaller values react faster but wake the backend more often.
+
+### `MESSAGE_RETENTION_DAYS`
+- Default: `30`
+- Used by: TiMa backend retention logic
+- Impact:
+  - Controls how long MQTT message records are retained.
+
+### `SECRET_KEY`
+- Default: `change-me`
+- Used by: TiMa backend
+- Impact:
+  - Should be replaced for any non-trivial installation.
+
+## 7.3 Shared MQTT Variables (Used by Consumer and Weather Service)
 
 ### `MQTT_HOST`
 - Default: `127.0.0.1`
@@ -199,7 +254,7 @@ TIMA_REPO_URL=https://github.com/nielssiebert/TiMa.git ./letrain-install.sh
   - Controls Python logging verbosity (`DEBUG`, `INFO`, `WARNING`, `ERROR`, ...).
   - Useful for troubleshooting MQTT, payload parsing, and API issues.
 
-## 7.3 Consumer-Specific Variables (`letrain-consumer.env`)
+## 7.4 Consumer-Specific Variables (`letrain-consumer.env`)
 
 ### `RELAY_ACTIVE_LOW`
 - Default: `false`
@@ -226,7 +281,7 @@ Payload behavior summary:
 - If action is missing/other value: message ignored.
 - Pin source: payload `pin` first, then `LETRAIN_DEFAULT_PIN`.
 
-## 7.4 Weather-Service Variables (`letrain-weather-factor.env`)
+## 7.5 Weather-Service Variables (`letrain-weather-factor.env`)
 
 ### `MQTT_OPERATION_TIMEOUT_SECONDS`
 - Default: `15`
@@ -293,7 +348,7 @@ Payload behavior summary:
   - No rain gives factor `1.0`.
   - Lowering this value makes the factor drop faster for the same rain amount.
 
-## 7.5 Parsing and Fallback Rules (Important in Production)
+## 7.6 Parsing and Fallback Rules (Important in Production)
 
 - Integer vars: invalid values are ignored and replaced by built-in defaults (warning logged).
 - Float vars: invalid values are ignored and replaced by built-in defaults (warning logged).
@@ -301,7 +356,7 @@ Payload behavior summary:
 - Missing critical values do not crash startup in most cases because defaults are used.
   - This improves resilience but can hide misconfiguration if logs are not monitored.
 
-## 7.6 Test-Only Variables (Not Used by Services)
+## 7.7 Test-Only Variables (Not Used by Services)
 
 These variables are only used by `test_letrain_weather_factor.py` when running optional live API tests.
 
